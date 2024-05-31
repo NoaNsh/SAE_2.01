@@ -302,7 +302,7 @@ public class GameCanvas extends Canvas {
 
 
     // Méthode pour convertir les coordonnées de la grille en pixels
-    private Point convertGridCoordinatesToPixels(int gridX, int gridY, double zoomFactor) {
+    public Point convertGridCoordinatesToPixels(int gridX, int gridY, double zoomFactor) {
         int centerX = (int) (getWidth() / 2); // Coordonnée X du centre de l'écran
         int centerY = (int) (getHeight() / 2); // Coordonnée Y du centre de l'écran
 
