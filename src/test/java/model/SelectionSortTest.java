@@ -43,7 +43,10 @@ class SelectionSortTest {
     @Test
     public void testTriSelection() {
         List<Position> l = selectionSort.triSelection();
+<<<<<<< HEAD
         System.out.println(l);
+=======
+>>>>>>> c7942fc056b791ec54ddc8d76fba59fa9cfd6ff7
 
         // Vérifiez que les échanges sont corrects en fonction des cristaux
         assertEquals(new Position(b.getX(), b.getY()), l.get(0));

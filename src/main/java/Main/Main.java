@@ -66,7 +66,17 @@ public class Main extends Application implements Constants {
 //        }).start();
     }
 
-    public static void main(String[] args) {
-        launch(args);
+
+        // Boucle principale du jeu
+        new Thread(() -> {
+            while (true) {
+                // Mettre à jour la carte et le joueur
+                try {
+                    Thread.sleep(10);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
-}
+

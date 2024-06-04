@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
+>>>>>>> c7942fc056b791ec54ddc8d76fba59fa9cfd6ff7
 package model;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -43,10 +50,37 @@ class TriBulleTest {
     @Test
     public void testTriBulles() {
         List<Position> l = bubbleSort.triBulles();
+<<<<<<< HEAD
         System.out.println(l);
+=======
+
+>>>>>>> c7942fc056b791ec54ddc8d76fba59fa9cfd6ff7
         assertEquals(new Position(a.getX(), a.getY()), l.get(0));
         assertEquals(new Position(b.getX(), b.getY()), l.get(1));
         assertEquals(new Position(a.getX(), a.getY()), l.get(2));
         assertEquals(new Position(c.getX(), c.getY()), l.get(3));
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+package model;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class TriBulleTest {
+
+    @Test
+    public void testBubbleSort() {
+        int[] liste = {5, 1, 4, 2, 8};
+        int[] attendu = {1, 2, 4, 5, 8};
+        TriBulle.bubbleSort(liste);
+        assertArrayEquals(attendu, liste);
+    }
+>>>>>>> a9eee1976180a830caf2dc8b5f1d68467f846181
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
+>>>>>>> c7942fc056b791ec54ddc8d76fba59fa9cfd6ff7
 }

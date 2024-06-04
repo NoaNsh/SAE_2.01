@@ -86,6 +86,10 @@ public class Position implements Constants {
 
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c7942fc056b791ec54ddc8d76fba59fa9cfd6ff7
 
 
     /**
@@ -133,6 +137,11 @@ public class Position implements Constants {
 
     }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
+>>>>>>> c7942fc056b791ec54ddc8d76fba59fa9cfd6ff7
     /**
      * Déplace l'apprenti vers une position cible en utilisant des threads pour gérer les mouvements
      * asynchrones et mettre à jour l'interface utilisateur via Platform.runLater.
@@ -241,6 +250,10 @@ public class Position implements Constants {
 
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c7942fc056b791ec54ddc8d76fba59fa9cfd6ff7
      * La méthode deplacementUneCase déplace la position this d’une case
      * pour la rapprocher de celle du paramètre parPosition
      * elle incrémente le champ static nombreDePas.
@@ -270,6 +283,11 @@ public class Position implements Constants {
     }
 
     /**
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
+>>>>>>> c7942fc056b791ec54ddc8d76fba59fa9cfd6ff7
      * Obtient le nombre total de pas effectués par l'apprenti.
      *
      * @return Le nombre de pas
@@ -352,4 +370,46 @@ public class Position implements Constants {
                 ", ordonnee=" + ordonnee +
                 '}';
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+    public void moveApprentis(char direction, Apprenti apprenti) {
+        int newX = apprenti.getX();
+        int newY = apprenti.getY();
+
+
+        switch (direction) {
+            case DIRECTION_UP:
+                newY -= 1; // Déplacement vers le haut
+                nombreDePas++;
+                break;
+            case DIRECTION_LEFT:
+                newX -= 1; // Déplacement vers la gauche
+                nombreDePas++;
+                break;
+            case DIRECTION_DOWN:
+                newY += 1; // Déplacement vers le bas
+                nombreDePas++;
+                break;
+            case DIRECTION_RIGHT:
+                newX += 1; // Déplacement vers la droite
+                nombreDePas++;
+                break;
+            case SWITCH_CRYSTAL:
+                break;
+        }
+
+        // Vérifier si les nouvelles coordonnées sont à l'intérieur de la grille //en considérant que la grille sera toujours impaire (pour le 0,0 au centre)
+        if (newX < -(GRID_WIDTH/2) || newX >= GRID_WIDTH/2+1 || newY < -(GRID_HEIGHT/2) || newY >= GRID_HEIGHT/2 + 1) {
+            return;
+        }
+        apprenti.setX(newX);
+        apprenti.setY(newY);
+
+
+    }
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
+>>>>>>> c7942fc056b791ec54ddc8d76fba59fa9cfd6ff7
 }

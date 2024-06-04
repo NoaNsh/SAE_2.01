@@ -69,7 +69,15 @@ public class Menu extends VBox {
     /**
      * Charge les fichiers de scénario disponibles et les ajoute au ComboBox des scénarios.
      */
+<<<<<<< HEAD
     public void loadScenarioFiles() {
+=======
+<<<<<<< HEAD
+    public void loadScenarioFiles() {
+=======
+    private void loadScenarioFiles() {
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
+>>>>>>> c7942fc056b791ec54ddc8d76fba59fa9cfd6ff7
         File folder = new File("File");
         List<String> scenarios = Arrays.stream(folder.listFiles((dir, name) -> name.endsWith(".txt")))
                 .map(File::getName)
@@ -96,7 +104,15 @@ public class Menu extends VBox {
      *
      * @param scenario Le nom du scénario sélectionné.
      */
+<<<<<<< HEAD
     public void changerScenario(String scenario) {
+=======
+<<<<<<< HEAD
+    public void changerScenario(String scenario) {
+=======
+    private void changerScenario(String scenario) {
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
+>>>>>>> c7942fc056b791ec54ddc8d76fba59fa9cfd6ff7
         if (changeScenarioListener != null) {
             changeScenarioListener.onScenarioChange("File/" + scenario);
         }
@@ -107,7 +123,15 @@ public class Menu extends VBox {
      *
      * @param algorithm Le nom de l'algorithme sélectionné.
      */
+<<<<<<< HEAD
     public void changerAlgorithm(String algorithm) {
+=======
+<<<<<<< HEAD
+    public void changerAlgorithm(String algorithm) {
+=======
+    private void changerAlgorithm(String algorithm) {
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
+>>>>>>> c7942fc056b791ec54ddc8d76fba59fa9cfd6ff7
         if (changeAlgorithmListener != null) {
             changeAlgorithmListener.onAlgorithmChange(algorithm);
         }

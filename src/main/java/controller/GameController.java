@@ -46,7 +46,15 @@ public class GameController implements Constants {
     /**
      * Met en place les événements de la souris pour le canvas.
      */
+<<<<<<< HEAD
     public void setupMouseEvents() {
+=======
+<<<<<<< HEAD
+    public void setupMouseEvents() {
+=======
+    private void setupMouseEvents() {
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
+>>>>>>> c7942fc056b791ec54ddc8d76fba59fa9cfd6ff7
         gameCanvas.setOnMouseClicked(event -> {
             Point gridCoordinates = gameCanvas.convertPixelsToGridCoordinates(event.getX(), event.getY(), ZOOM_FACTOR);
             int targetX = gridCoordinates.x;
@@ -114,7 +122,15 @@ public class GameController implements Constants {
      *
      * @param scenarioFile Le fichier du scénario à charger.
      */
+<<<<<<< HEAD
     public void loadScenario(String scenarioFile) {
+=======
+<<<<<<< HEAD
+    public void loadScenario(String scenarioFile) {
+=======
+    private void loadScenario(String scenarioFile) {
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
+>>>>>>> c7942fc056b791ec54ddc8d76fba59fa9cfd6ff7
         Platform.runLater(() -> {
             gameCanvas.supprimerCristaux(scenario.getTemples(), ZOOM_FACTOR);
             scenario.clearTemples(); // Vider la liste des temples
@@ -140,7 +156,15 @@ public class GameController implements Constants {
      *
      * @param algorithm L'algorithme à charger.
      */
+<<<<<<< HEAD
     public void loadAlgorithm(String algorithm) {
+=======
+<<<<<<< HEAD
+    public void loadAlgorithm(String algorithm) {
+=======
+    private void loadAlgorithm(String algorithm) {
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
+>>>>>>> c7942fc056b791ec54ddc8d76fba59fa9cfd6ff7
         menu.addEventToHistory("Algorithme sélectionné : " + algorithm);
         if ("Tri à bulle".equals(algorithm)) {
             BubbleSortAlgo();
@@ -156,7 +180,15 @@ public class GameController implements Constants {
     /**
      * Implémente l'algorithme de tri heuristique personnalisé.
      */
+<<<<<<< HEAD
     public void HeuristicPersoSortAlgo() {
+=======
+<<<<<<< HEAD
+    public void HeuristicPersoSortAlgo() {
+=======
+    private void HeuristicPersoSortAlgo() {
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
+>>>>>>> c7942fc056b791ec54ddc8d76fba59fa9cfd6ff7
         menu.addEventToHistory(HEURISTIC_SORT_MESSAGE);
 
         new Thread(() -> {
@@ -164,7 +196,15 @@ public class GameController implements Constants {
             boolean sorted = false;
             while (!sorted && apprenti.isRunning()) {
                 try {
+<<<<<<< HEAD
                     Thread.sleep(ALGORITHM_SLEEP_DURATION); // Attendre une courte période
+=======
+<<<<<<< HEAD
+                    Thread.sleep(ALGORITHM_SLEEP_DURATION); // Attendre une courte période
+=======
+                    Thread.sleep(ALGORITHM_SLEEP_DURATION); // Attendre une courte période avant de vérifier à nouveau
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
+>>>>>>> c7942fc056b791ec54ddc8d76fba59fa9cfd6ff7
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -187,7 +227,15 @@ public class GameController implements Constants {
     /**
      * Implémente l'algorithme de tri optimal personnalisé.
      */
+<<<<<<< HEAD
     public void OptimalPersoSortAlgo() {
+=======
+<<<<<<< HEAD
+    public void OptimalPersoSortAlgo() {
+=======
+    private void OptimalPersoSortAlgo() {
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
+>>>>>>> c7942fc056b791ec54ddc8d76fba59fa9cfd6ff7
         menu.addEventToHistory(OPTIMAL_SORT_MESSAGE);
 
         new Thread(() -> {
@@ -220,7 +268,15 @@ public class GameController implements Constants {
     /**
      * Implémente l'algorithme de tri à bulle.
      */
+<<<<<<< HEAD
     public void BubbleSortAlgo() {
+=======
+<<<<<<< HEAD
+    public void BubbleSortAlgo() {
+=======
+    private void BubbleSortAlgo() {
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
+>>>>>>> c7942fc056b791ec54ddc8d76fba59fa9cfd6ff7
         menu.addEventToHistory(BUBBLE_SORT_MESSAGE);
 
         // Créer un nouveau thread pour éviter de bloquer l'interface utilisateur
@@ -254,7 +310,15 @@ public class GameController implements Constants {
     /**
      * Implémente l'algorithme de tri par selection.
      */
+<<<<<<< HEAD
     public void SelectionSortAlgo() {
+=======
+<<<<<<< HEAD
+    public void SelectionSortAlgo() {
+=======
+    private void SelectionSortAlgo() {
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
+>>>>>>> c7942fc056b791ec54ddc8d76fba59fa9cfd6ff7
         menu.addEventToHistory(SELECTION_SORT_MESSAGE);
 
         // Créer un nouveau thread pour éviter de bloquer l'interface utilisateur
@@ -289,7 +353,15 @@ public class GameController implements Constants {
     /**
      * Coupe l'algorithme en cours et recharge le scénario.
      */
+<<<<<<< HEAD
     public void reset() {
+=======
+<<<<<<< HEAD
+    public void reset() {
+=======
+    private void reset() {
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
+>>>>>>> c7942fc056b791ec54ddc8d76fba59fa9cfd6ff7
         apprenti.setRunning(false); // Arrêter tous les threads en cours
         apprenti.setMoving(false); // Arrêter tout déplacement en cours
 
