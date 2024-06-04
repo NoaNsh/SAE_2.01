@@ -1,5 +1,9 @@
 package Main;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
 import controller.GameController;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -50,6 +54,7 @@ public class Main extends Application implements Constants {
         Scene scene = primaryStage.getScene();
         scene.setOnKeyPressed(event -> gameController.handleInput(event));
 
+<<<<<<< HEAD
 
 // ancien systeme d'actualisation
 //        // Boucle principale du jeu
@@ -66,6 +71,70 @@ public class Main extends Application implements Constants {
 //        }).start();
     }
 
+=======
+        // Boucle principale du jeu
+        new Thread(() -> {
+            while (true) {
+                // Mettre à jour la carte et le joueur
+                try {
+                    Thread.sleep(10);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+    }
+
+=======
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+import modele.Apprenti;
+import modele.Position;
+import modele.Scenario;
+import resolution.*;
+import ui.GameCanvas;
+import ui.InterfaceGraphique;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+
+import javax.swing.*;
+
+public class Main extends Application {
+
+    @Override
+    public void start(Stage primaryStage) {
+        // Initialiser les composants de l'interface utilisateur
+        InterfaceGraphique interfaceGraphique = new InterfaceGraphique();
+        ZoneResultats zoneResultats = new ZoneResultats();
+
+        // Initialiser le scénario et l'apprenti
+        Scenario scenario = new Scenario();
+        scenario.fileLoader("File/scenario2.txt");
+
+        // Initialiser les algorithmes
+        AlgorithmeTri algorithmeTri = new TriPerso();
+        AlgorithmeHeuristique algorithmeHeuristique = new HeuristiquePerso();
+        AlgorithmeOptimal algorithmeOptimal = new OptimalPerso(); // Implémentez cet algorithme
+
+        // Associer les composants à l'interface graphique
+        interfaceGraphique.setZoneResultats(zoneResultats);
+
+        // Associer les algorithmes à l'interface graphique
+        interfaceGraphique.setAlgorithmeTri(algorithmeTri);
+        interfaceGraphique.setAlgorithmeHeuristique(algorithmeHeuristique);
+        interfaceGraphique.setAlgorithmeOptimal(algorithmeOptimal);
+
+        // Afficher l'interface graphique
+        interfaceGraphique.show(primaryStage);
+    }
+
+
+>>>>>>> a9eee1976180a830caf2dc8b5f1d68467f846181
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
     public static void main(String[] args) {
         launch(args);
     }

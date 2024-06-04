@@ -49,6 +49,7 @@ public interface Constants {
     int TEMPLE_SIZE_Y = 72; // Taille de chaque temple dans le sprite sheet
     int SPRITE_SIZE_X = 204; // Largeur d'un sprite dans l'animation
     int SPRITE_SIZE_Y = 112; // Hauteur d'un sprite dans l'animation
+<<<<<<< HEAD
     int WALL_SIZE_WIDTH = 8; // Largeur d'un muret
     int WALL_SIZE_LONG = 96; // Longueur d'un muret
 
@@ -58,5 +59,7 @@ public interface Constants {
     int WALL_HORIZONTAL_TILE = 64; // Valeur unique pour les mur horizontaux
 
 
+=======
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
     int SPEED_ANIMATION = 22; // Vitesse de l'animation
 }

@@ -16,29 +16,43 @@ import model.Apprenti;
 import model.Temple;
 import constants.Constants;
 import java.awt.Point;
+<<<<<<< HEAD
+=======
+import java.io.File;
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
 import java.util.List;
 import java.util.Random;
 import view.Menu;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
 /**
  * La classe GameCanvas représente le canevas de jeu où la carte, les temples, les cristaux et l'apprenti sont dessinés.
  * Elle extends la classe Canvas de JavaFX pour fournir des fonctionnalités de dessin.
  */
 public class GameCanvas extends Canvas implements Constants {
     private Image tilesetImage;
+<<<<<<< HEAD
     private Image wallLeftImage;
     private Image wallRightImage;
     private Image wallHorizontalImage;
     private Image background;
+=======
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
     private int[][] tiles; // Tableau pour stocker les indices des tuiles
     private Apprenti apprenti;
     private TilePane tilePane; // Déclaration de la variable tilePane
     private List<Temple> temples;
     private Menu menu;
     GraphicsContext gc = getGraphicsContext2D();
+<<<<<<< HEAD
     // Attribut pour stocker la carte générée aléatoirement
     private int[][] generatedMap;
     private int[][] wallsMap;
+=======
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
 
     /**
      * Constructeur de la classe GameCanvas.
@@ -48,6 +62,7 @@ public class GameCanvas extends Canvas implements Constants {
      * @param temples Liste des temples à afficher sur le canvas.
      * @param apprenti L'apprenti à afficher sur le canvas.
      */
+<<<<<<< HEAD
     public GameCanvas(double width, double height, List<Temple> temples, Apprenti apprenti, Menu menu) {
         super(width, height);
         tilesetImage = new Image("file:imgs/img/Tileset_Grass.png");
@@ -60,6 +75,21 @@ public class GameCanvas extends Canvas implements Constants {
         this.menu = menu;
     }
 
+=======
+    public GameCanvas(double width, double height, List<Temple> temples,Apprenti apprenti, Menu menu) {
+        super(width, height);
+        tilesetImage = new Image("file:imgs/img/Tileset_Grass.png");
+        this.apprenti = apprenti;
+        this.temples = temples; // Assigner la liste des temples
+        this.menu = menu;
+
+    }
+
+    // Attribut pour stocker la carte générée aléatoirement
+    private int[][] generatedMap;
+
+
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
     /**
      * Méthode pour dessiner la grille et stocker la carte générée aléatoirement.
      *
@@ -67,18 +97,25 @@ public class GameCanvas extends Canvas implements Constants {
      * @param cols       Nombre de colonnes dans la grille.
      * @param zoomFactor Facteur de zoom à appliquer lors du dessin de la grille.
      */
+<<<<<<< HEAD
 
     public void dessinerGrille(int rows, int cols, double zoomFactor) {
         // Afficher le fond
         gc.drawImage(background, 0, 0, getWidth(), getHeight());
 
+=======
+    public void dessinerGrille(int rows, int cols, double zoomFactor) {
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
         Random random = new Random();
         int centerX = (int) (getWidth() / 2); // Coordonnée X du point central
         int centerY = (int) (getHeight() / 2); // Coordonnée Y du point central
 
         // Initialiser le tableau pour stocker la carte générée aléatoirement
         generatedMap = new int[rows][cols];
+<<<<<<< HEAD
         wallsMap = new int[rows + 2][cols + 2]; // +2 pour inclure les murs extérieurs
+=======
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
 
         // Calculer les coordonnées de départ pour dessiner la grille autour du point central
         double startX = centerX - (cols / 2) * CELL_SIZE * zoomFactor;
@@ -98,6 +135,7 @@ public class GameCanvas extends Canvas implements Constants {
                 gc.drawImage(tilesetImage, sourceX, sourceY, CELL_SIZE, CELL_SIZE, targetX, targetY, targetWidth, targetHeight);
             }
         }
+<<<<<<< HEAD
 
         // Générer et dessiner les murets
         generateAndDrawWalls(rows, cols, zoomFactor, random, startX, startY);
@@ -189,16 +227,27 @@ public class GameCanvas extends Canvas implements Constants {
 
     /**
      * Méthode pour réinitialiser la grille pour recharger l'image et effacer les anciens déplacements.
+=======
+    }
+
+    /**
+     * Méthode pour réinitialiser la grille.
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
      *
      * @param rows       Nombre de lignes dans la grille.
      * @param cols       Nombre de colonnes dans la grille.
      * @param zoomFactor Facteur de zoom à appliquer lors du dessin de la grille.
      */
     public void resetGrid(int rows, int cols, double zoomFactor) {
+<<<<<<< HEAD
         if (generatedMap != null) {
             // Afficher le fond
             gc.drawImage(background, 0, 0, getWidth(), getHeight());
 
+=======
+
+        if (generatedMap != null) {
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
             int centerX = (int) (getWidth() / 2); // Coordonnée X du point central
             int centerY = (int) (getHeight() / 2); // Coordonnée Y du point central
 
@@ -219,6 +268,7 @@ public class GameCanvas extends Canvas implements Constants {
                     gc.drawImage(tilesetImage, sourceX, sourceY, CELL_SIZE, CELL_SIZE, targetX, targetY, targetWidth, targetHeight);
                 }
             }
+<<<<<<< HEAD
 
             // Dessiner les murets stockés
             drawWalls(rows, cols, zoomFactor, startX, startY);
@@ -228,6 +278,13 @@ public class GameCanvas extends Canvas implements Constants {
 
 
 /**
+=======
+        }
+
+    }
+
+    /**
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
      * Méthode pour dessiner les temples sur le canvas.
      *
      * @param temples    Liste des temples à dessiner.
@@ -326,7 +383,11 @@ public class GameCanvas extends Canvas implements Constants {
      * @param color Couleur du cristal.
      * @return Le nom de fichier du cristal animé correspondant à la couleur.
      */
+<<<<<<< HEAD
     public String getCrystalAnimationFileName(int color) {
+=======
+    private String getCrystalAnimationFileName(int color) {
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
         switch (color) {
             case 1: return "blue_crystal_animated.gif";
             case 2: return "purple_crystal_animated.gif";
@@ -347,7 +408,11 @@ public class GameCanvas extends Canvas implements Constants {
      * @param color Couleur du cristal.
      * @return Le nom de fichier du cristal statique correspondant à la couleur.
      */
+<<<<<<< HEAD
     public String getCrystalFileName(int color) {
+=======
+    private String getCrystalFileName(int color) {
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
         switch (color) {
             case 1: return "blue_crystal.gif";
             case 2: return "purple_crystal.gif";
@@ -517,7 +582,11 @@ public class GameCanvas extends Canvas implements Constants {
      *
      * @param crystalColor Couleur du cristal.
      */
+<<<<<<< HEAD
     public void getApprentiSpriteSheetPath(int crystalColor) {
+=======
+    private void getApprentiSpriteSheetPath(int crystalColor) {
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
         switch (crystalColor) {
             case 1:
                 apprenti.setSprite_sheet_apprenti("sprite_sheet_apprenti_blue.png");
@@ -550,7 +619,11 @@ public class GameCanvas extends Canvas implements Constants {
      * @param x Position X du temple.
      * @param y Position Y du temple.
      */
+<<<<<<< HEAD
     public void switchCrystal(int x, int y) {
+=======
+    private void switchCrystal(int x, int y) {
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
         // Récupérer le temple à la position spécifiée
         Temple temple = getTempleAtPosition(x, y);
 
@@ -589,7 +662,11 @@ public class GameCanvas extends Canvas implements Constants {
      * @param y Position Y du temple.
      * @return Le temple situé à la position spécifiée, null si aucun temple n'est trouvé.
      */
+<<<<<<< HEAD
     public Temple getTempleAtPosition(int x, int y) {
+=======
+    private Temple getTempleAtPosition(int x, int y) {
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
 
         for (Temple temple : temples) {
 
@@ -610,7 +687,11 @@ public class GameCanvas extends Canvas implements Constants {
      * @param zoomFactor Facteur de zoom à appliquer.
      * @return Les coordonnées en pixels du point correspondant sur la grille.
      */
+<<<<<<< HEAD
     public Point convertGridCoordinatesToPixels(int gridX, int gridY, double zoomFactor) {
+=======
+    private Point convertGridCoordinatesToPixels(int gridX, int gridY, double zoomFactor) {
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
         int centerX = (int) (getWidth() / 2); // Coordonnée X du centre de l'écran
         int centerY = (int) (getHeight() / 2); // Coordonnée Y du centre de l'écran
 
@@ -646,6 +727,10 @@ public class GameCanvas extends Canvas implements Constants {
      * Méthode pour effacer le canvas. entierement
      */
     public void clear() {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2b700b00f50ba9b3ad6bd3a111baf5dff187d07e
         gc.clearRect(0, 0, getWidth(), getHeight());
 
     }
