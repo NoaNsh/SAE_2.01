@@ -1,0 +1,75 @@
+/* Style général du VBox */
+.root {
+    -fx-background-color: #2E2E2E;
+    -fx-padding: 20;
+    -fx-spacing: 20;
+}
+
+/* Style du ComboBox */
+.combo-box {
+    -fx-font-family: 'Papyrus', 'Comic Sans MS', cursive;
+    -fx-font-size: 14px;
+    -fx-background-color: #3A3A3A;
+    -fx-border-color: #FFD700;
+    -fx-border-width: 2px;
+    -fx-text-fill: #FFFFFF;
+}
+
+/* Style des items du ComboBox */
+.combo-box .list-cell {
+    -fx-background-color: #3A3A3A;
+    -fx-text-fill: #FFFFFF;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #FFD700;
+    -fx-text-fill: #000000;
+}
+
+/* Style du label */
+.label {
+    -fx-font-family: 'Papyrus', 'Comic Sans MS', cursive;
+    -fx-font-size: 16px;
+    -fx-text-fill: #FFD700;
+}
+
+/* Style du bouton */
+.button {
+    -fx-font-family: 'Papyrus', 'Comic Sans MS', cursive;
+    -fx-font-size: 16px;
+    -fx-background-color: #3A3A3A;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #FFD700;
+    -fx-border-width: 2px;
+}
+
+.button:hover {
+    -fx-background-color: #FFD700;
+    -fx-text-fill: #000000;
+}
+
+/* Style de la ListView pour l'historique */
+.list-view {
+    -fx-background-color: #3A3A3A;
+    -fx-border-color: #FFD700;
+    -fx-border-width: 2px;
+    -fx-padding: 10px;
+}
+
+.list-view .list-cell {
+    -fx-background-color: #3A3A3A;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: 'Papyrus', 'Comic Sans MS', cursive;
+    -fx-font-size: 14px;
+}
+
+.list-view .list-cell:hover {
+    -fx-background-color: #FFD700;
+    -fx-text-fill: #000000;
+}
+
+.list-view .scroll-bar {
+    -fx-background-color: #2E2E2E;
+}
+
+
